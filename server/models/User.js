@@ -20,6 +20,12 @@ const artistSchema = new Schema(
             required: true,
             minLength: 8
         },
+        bio: {
+            type: String,
+            required: 'Let us know more about yourself and your work...',
+            minlength: 1,
+            maxlength: 300
+        },
         reviews: [
             {
                 type: Schema.Types.ObjectId,
