@@ -32,9 +32,9 @@ const artistSchema = new Schema(
                 ref: 'review'
             }
         ],
-        toJSON: {
-            virtuals: true
-        }
+        // toJSON: {
+        //     virtuals: true
+        // }
     }
 )
 
