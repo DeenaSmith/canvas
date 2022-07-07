@@ -30,7 +30,7 @@ const resolvers = {
             const params = username ? { username } : {};
             return Reviews.find(params).sort({ createdAt: -1 });
         },
-        reviews: async (parent, { _id }) => {
+        review: async (parent, { _id }) => {
             return Reviews.findOne({ _id });
         }
     },
