@@ -10,7 +10,7 @@ function Sidebar() {
             </a>
 
             <a className="menu-item" href="#profile">
-                View Profile
+                Profile
             </a>            
         </Menu>
     );

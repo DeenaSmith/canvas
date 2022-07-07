@@ -10,55 +10,56 @@ body {
 }
 
 .canvas-header {
-  font-size: 30px;
+  font-size: 35px;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   background: #3c3837;
   color: white;
   font-family: 'Italiana', serif;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .bm-item {
   display: inline-block;
   text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
+  margin-bottom: 15px;
+  color: white;
   transition: color 0.2s;
 }
 
 .bm-item:hover {
-  color: white;
+  color: #b6b2b3;
 }
 
 .bm-burger-button {
-  position: fixed;
+  position: relative;
   width: 36px;
   height: 30px;
-  left: 36px;
-  top: 36px;
+  left: 15px;
+  top: 15px;
 }
 
 .bm-burger-bars {
-  background: #373a47;
+  background: white;
 }
 
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 25px;
+  width: 25px;
 }
 
 .bm-cross {
-  background: #bdc3c7;
+  background: white;
 }
 
 .bm-menu {
-  background: #373a47;
+  background: #3c3837;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
-.bm-morph-shape {
+/*.bm-morph-shape {
   fill: #373a47;
 }
 
@@ -68,4 +69,4 @@ body {
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-}
+} */
