@@ -6,15 +6,11 @@ function Header() {
     return (
         <section>
             <header className="canvas-header">
+                <Sidebar> </Sidebar>
+                <h1>CANVAS</h1>
                 <div>
-                    <Sidebar> </Sidebar>
-                </div>
-                <div>
-                    <h1 className="header-h1">Canvas</h1>
-                </div>
-                <div className="login-button">
-                    <button>Login</button>
-                    <button>Sign Up</button>
+                    <a href="#login">Login</a>
+                    <a href="signup">Sign Up</a>
                 </div>
             </header>
         </section>

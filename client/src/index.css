@@ -1,14 +1,26 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
+/*******************************************************************************/
+
+/* Universal Page Styling */
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
   background: #b6b2b3;
 }
 
+/*******************************************************************************/
+
+/* Header Styling */
 .canvas-header {
   font-size: 35px;
   padding: 5px;
@@ -20,6 +32,14 @@ body {
   justify-content: space-between;
 }
 
+.header-links {
+  text-decoration: none;
+  color: white;
+}
+
+/*******************************************************************************/
+
+/* Burger Menu (bm) / Sidebar Styling */
 .bm-item {
   display: inline-block;
   text-decoration: none;
@@ -33,11 +53,11 @@ body {
 }
 
 .bm-burger-button {
-  position: relative;
+  position: absolute;
   width: 36px;
   height: 30px;
-  left: 15px;
-  top: 15px;
+  left: 20px;
+  top: 20px;
 }
 
 .bm-burger-bars {
@@ -58,15 +78,3 @@ body {
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
-
-/*.bm-morph-shape {
-  fill: #373a47;
-}
-
-.bm-item-list {
-  color: #b8b7ad;
-}
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-} */
