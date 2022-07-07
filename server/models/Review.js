@@ -18,9 +18,12 @@ const reviewSchema = new Schema(
             type: String,
             required: true
         },
+<<<<<<< HEAD
         /*toJSON: {
             getters: true
         }*/
+=======
+>>>>>>> 5cbff0418cc78fe848acfe222b6b425deebfd74e
     }
 )
 
