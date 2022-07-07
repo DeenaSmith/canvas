@@ -18,9 +18,9 @@ const reviewSchema = new Schema(
             type: String,
             required: true
         },
-        toJSON: {
+        /*toJSON: {
             getters: true
-        }
+        }*/
     }
 )
 
