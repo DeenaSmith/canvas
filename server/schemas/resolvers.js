@@ -2,6 +2,15 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Reviews } = require('../models');
 const { signToken } = require('../utils/auth');
+const {createWriteStream} = require('fs')
+
+const storeUpload = ({ stream, filename }) =>
+  new Promise((resolve, reject) =>
+    stream
+      .pipe(createWriteStream(filename))
+      .on("finish", () => resolve())
+      .on("error", reject)
+  );
 
 const resolvers = {
     Query: {
@@ -72,6 +81,11 @@ const resolvers = {
             }
 
             throw new AuthenticationError('You need to be logged in!');
+        },
+        uploadFile: async (parent, { file }) => {
+            const { stream, filename } = await file;
+            await storeUpload({ stream, filename });
+            return true;
         }
     }
 

@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@graphql-yoga/node": "^2.11.2",
         "apollo-server-express": "^3.6.1",
         "bcrypt": "^4.0.1",
         "cors": "^2.8.5",
