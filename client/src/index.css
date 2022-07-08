@@ -1,0 +1,83 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/*******************************************************************************/
+
+/* Universal Page Styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background: #b6b2b3;
+}
+
+/*******************************************************************************/
+
+/* Header Styling */
+.canvas-header {
+  font-size: 35px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #3c3837;
+  color: white;
+  font-family: 'Italiana', serif;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px black;
+}
+
+.header-links {
+  padding-right: 20px;
+  padding-top: 27px;
+  font-size: 23px;
+}
+
+/*******************************************************************************/
+
+/* Burger Menu (bm) / Sidebar Styling */
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: white;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: #b6b2b3;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 20px;
+  top: 20px;
+}
+
+.bm-burger-bars {
+  background: white;
+}
+
+.bm-cross-button {
+  height: 25px;
+  width: 25px;
+}
+
+.bm-cross {
+  background: white;
+}
+
+.bm-menu {
+  background: #3c3837;
+  box-shadow: 4px 4px 4px #141414;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
