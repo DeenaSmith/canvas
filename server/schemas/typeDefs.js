@@ -1,4 +1,3 @@
-
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -29,11 +28,15 @@ const typeDefs = gql`
     review(_id: ID!): Reviews
   }
 
+  scalar Upload
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addReview(reviewText: String!): Reviews
+    uploadFile(file: Upload!): Boolean
   }
+
 `;
 
 module.exports = typeDefs;

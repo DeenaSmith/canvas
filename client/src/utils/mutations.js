@@ -49,3 +49,9 @@ export const REMOVE_REVIEW = gql`
     }
   }
 `;
+
+export const UPLOAD_FILE = gql`
+mutations($file: Upload!) {
+    uploadFile(file: $file)
+}
+`;
