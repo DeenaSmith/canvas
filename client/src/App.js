@@ -1,24 +1,32 @@
-import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ArtistSignup from './pages/ArtistSignup';
+import Home from './pages/Home';
+import { ApolloClient, ApolloProvider, InMemoryCache, gql  } from '@apollo/client';
 
 
 function App() {
 
-  return (
-    <ApolloProvider client={true}>
-      <Router>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/signup" element={<ArtistSignup />} />
-          </Routes>
+  const client = new ApolloClient({
+    uri: 'http://localhost:3001/graphql',
+    cache: new InMemoryCache(),
+  });
 
-        </div>
-      </Router>
-    </ApolloProvider>
+  return (
+  
+      <Router>
+        <ApolloProvider client={client}>
+          <div>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/signup" element={<ArtistSignup />} />
+            </Routes>
+
+          </div>
+      </ApolloProvider>
+    </Router>
   );
 }
 
