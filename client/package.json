@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@apollo/client": "^3.6.9",
     "@mui/material": "^5.8.7",
     "@mui/styled-engine-sc": "^5.8.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -14,14 +14,15 @@
     "apollo-upload-client": "^17.0.0",
     "graphql": "^16.5.0",
     "graphql-tag": "^2.12.6",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.2",
+    "react-dropzone-uploader": "^2.11.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "jwt-decode": "^3.1.2"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +48,7 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": {"babel-loader":"8.1.0"}
-
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  }
 }
