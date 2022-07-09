@@ -1,7 +1,5 @@
 import React from 'react';
 import Sidebar from '../Sidebar';
-
-
 function Header() {
     return (
         <section>
@@ -16,5 +14,4 @@ function Header() {
         </section>
     );
 }
-
 export default Header;
