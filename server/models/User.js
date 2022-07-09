@@ -22,7 +22,7 @@ const artistSchema = new Schema(
         },
         bio: {
             type: String,
-            required: 'Let us know more about yourself and your work...',
+            //required: 'Let us know more about yourself and your work...',
             minlength: 1,
             maxlength: 300
         },
