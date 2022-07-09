@@ -9,8 +9,8 @@ function Header() {
                 <Sidebar> </Sidebar>
                 <h1>CANVAS</h1>
                 <div className="header-links">
-                    <a href="#login">Login  </a>
-                    <a href="signup">Sign-Up</a>
+                    <a href="/login">Login  </a>
+                    <a href="/signup">Sign-Up</a>
                 </div>
             </header>
         </section>
