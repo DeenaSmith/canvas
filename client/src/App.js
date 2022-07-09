@@ -5,6 +5,7 @@ import ArtistSignup from './pages/ArtistSignup';
 import Home from './pages/Home';
 import Upload from './pages/uploadPhoto';
 import { ApolloClient, ApolloProvider, InMemoryCache, gql  } from '@apollo/client';
+import Landing from './pages/Landing';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Landing />} />
+              <Route path='/Home' element={<Home />} />
               <Route path="/signup" element={<ArtistSignup />} />
             </Routes>
             <Upload />
