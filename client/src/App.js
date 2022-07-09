@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ArtistSignup from './pages/ArtistSignup';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import Upload from './pages/uploadPhoto';
 import { ApolloClient, ApolloProvider, InMemoryCache, gql  } from '@apollo/client';
@@ -22,8 +23,8 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path='/Home' element={<Home />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<ArtistSignup />} />
             </Routes>
             <Upload />
