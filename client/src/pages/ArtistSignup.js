@@ -22,8 +22,6 @@ const ArtistSignup = () => {
             });
             console.log('!!', data)
             Auth.login(data.addUser.token);
-            // const token = mutationResponse.data.addUser.token;
-            // Auth.login(token);
 
         } catch (e) {
             console.error(e);
@@ -37,42 +35,8 @@ const ArtistSignup = () => {
             ...formState,
             [name]: value,
         });
-
     };
 
-    // const [userName, setUserName] = useState('')
-    // const [userEmail, setUserEmail] = useState('')
-    // const [userPassword, setUserPassword] = useState('')
-
-    // const [addUser, { error }] = useMutation(ADD_USER);
-
-    // // submit form
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    //     localStorage.clear();
-
-    //     localStorage.setItem('userName', userName)
-    //     localStorage.setItem('userEmail', userEmail)
-    //     localStorage.setItem('userPassword', userPassword)
-
-    //     try {
-    //         const { data } = await addUser({
-    //             variables: { 
-    //                 'username' : userName, 
-    //                 'email' : userEmail,
-    //                 'password' : userPassword 
-    //             },
-
-    //         });
-
-
-    //         Auth.login(data.addUser.token);
-
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-
-    // };
 
     return (
 
@@ -82,12 +46,12 @@ const ArtistSignup = () => {
             <h2>Signup</h2>
             <form onSubmit={handleFormSubmit}>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="userName">User Name:</label>
+                    <label htmlFor="username">User Name:</label>
                     <input
                         placeholder="First"
-                        name="userName"
-                        type="userName"
-                        id="userName"
+                        name="username"
+                        type="username"
+                        id="username"
                         onChange={handleChange}
                     />
                 </div>
@@ -118,50 +82,7 @@ const ArtistSignup = () => {
             </form>
             {error && <div>Sign up failed</div>}
         </div>
-        //   );
-        // <main className="flex-row justify-center mb-4">
-        //     <div className="col-12 col-md-6">
-        //         <div className="card">
-        //             <h4 className="card-header">Sign Up Here</h4>
-        //             <div className="card-body">
-        //                 <form onSubmit={handleFormSubmit}>
-        //                     <input
-        //                         className="form-input"
-        //                         placeholder="Your artist/username"
-        //                         name="username"
-        //                         type="username"
-        //                         id="username"
-        //                         value={userName}
-        //                         onChange={(e) => setUserName(e.target.value)}
-        //                     />
-        //                     <input
-        //                         className="form-input"
-        //                         placeholder="Enter Your Email"
-        //                         name="email"
-        //                         type="email"
-        //                         id="email"
-        //                         value={userEmail}
-        //                         onChange={(e) => setUserEmail(e.target.value)}
-        //                     />
-        //                     <input
-        //                         className="form-input"
-        //                         placeholder="Enter Your Password"
-        //                         name="password"
-        //                         type="password"
-        //                         id="password"
-        //                         value={userPassword}
-        //                         onChange={(e) => setUserPassword(e.target.value)}
-        //                     />
-        //                     <button className="btn d-block w-100" type="submit">
-        //                         Submit
-        //                     </button>
-        //                 </form>
 
-        //                 {error && <div>Signup failed, try again!</div>}
-        //             </div>
-        //         </div>
-        //     </div>
-        // </main>
     );
 };
 
