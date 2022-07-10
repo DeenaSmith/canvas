@@ -5,7 +5,7 @@ import { slide as Menu } from 'react-burger-menu';
 function Sidebar() {
     return (
         <Menu>
-            <a className="menu-item" href="/Home">
+            <a className="menu-item" href="/home">
                 Home
             </a>
 

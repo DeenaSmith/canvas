@@ -1,10 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Landing() {
 
     return (
         <>
-            <div>
+            <div className="landing">
+                <NavLink exact='true' to='/'>
                 <button type="submit">
                     T
                     <br/>
@@ -19,6 +21,7 @@ function Landing() {
                     O
                     <br/>
                 </button>
+                </NavLink>
             </div>
         </>
     )
