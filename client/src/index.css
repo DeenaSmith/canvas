@@ -88,4 +88,57 @@ body {
 
 .landing {
   background-image: url('../image/background-landing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#landing-tattoo-btn{
+  position: absolute;
+  color: #fff;
+  background-color: transparent;
+  top: 18%;
+  left:15px;
+  width: auto;
+  height: auto;
+  font-size: 10vh;
+  border: none;
+  padding: 5px;
+  -webkit-animation: glowing 3000ms infinite;
+  -moz-animation: glowing 3000ms infinite;
+  -o-animation: glowing 3000ms infinite;
+  animation: glowing 3000ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    -webkit-box-shadow: 0 0 3px #fff;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 15px #fff;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 3px #fff;
+  }
+}
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 3px #fff;
+  }
+  50% {
+    box-shadow: 0 0 15px #fff;
+  }
+  100% {
+    box-shadow: 0 0 3px #fff;
+  }
+}
+
+#landing-tattoo-btn:hover{
+  background-color: rgba(255, 255, 255, .1);
+  color: #fff;
+  cursor: pointer;
 }

@@ -7,18 +7,18 @@ function Landing() {
         <>
             <div className="landing">
                 <NavLink exact='true' to='/'>
-                <button type="submit">
-                    T
+                <button id="landing-tattoo-btn" className="btn rounded" type="submit">
+                    C
                     <br/>
                     A
                     <br/>
-                    T
+                    N
                     <br/>
-                    T
+                    V
                     <br/>
-                    O
+                    A
                     <br/>
-                    O
+                    S
                     <br/>
                 </button>
                 </NavLink>
