@@ -55,6 +55,7 @@ const ArtistSignup = () => {
                     <form onSubmit={handleFormSubmit} className="col-8">
                         <div className="">
                             <label htmlFor="username">User Name:</label>
+                            <br />
                             <input
                                 placeholder="First"
                                 name="username"
@@ -66,6 +67,7 @@ const ArtistSignup = () => {
 
                         <div className="">
                             <label htmlFor="email">Email:</label>
+                            <br />
                             <input
                                 placeholder="youremail@test.com"
                                 name="email"
@@ -77,6 +79,7 @@ const ArtistSignup = () => {
 
                         <div className="flex-row space-between my-2">
                             <label htmlFor="pwd">Password:</label>
+                            <br />
                             <input
                                 placeholder="******"
                                 name="password"
