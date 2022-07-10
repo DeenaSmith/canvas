@@ -6,7 +6,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Upload from './pages/uploadPhoto';
 import { ApolloClient, ApolloProvider, InMemoryCache, gql  } from '@apollo/client';
-import Landing from './pages/Landing';
+//import Landing from './pages/Landing';
 
 
 function App() {
@@ -23,13 +23,8 @@ function App() {
           <div>
             <Header />
             <Routes>
-<<<<<<< HEAD
-              <Route path='/' element={<Landing />} />
-              <Route path="/home" element={<Home />} />
-=======
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
->>>>>>> b01d80b33c2165dc4844171777533fdc41df806d
               <Route path="/signup" element={<ArtistSignup />} />
             </Routes>
             <Upload />

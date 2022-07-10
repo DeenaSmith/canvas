@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
 
 
 const ArtistSignup = () => {
+
     const [formState, setFormState] = useState({
         username: '',
         email: '',
@@ -39,7 +45,10 @@ const ArtistSignup = () => {
 
 
     return (
-
+        <>
+        <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'0 auto', float: 'none', marginBottom:'10px', marginTop: '30px' }}>
+        <Card variant='outlined'>
+        <CardContent>
         <div className="container my-1">
             {/* <Link to="/login">← Go to Login</Link> */}
 
@@ -77,12 +86,17 @@ const ArtistSignup = () => {
                     />
                 </div>
                 <div className="flex-row flex-end">
-                    <button type="submit">Submit</button>
+                    <CardActions >
+                    <Button type="submit">Submit</Button>
+                    </CardActions>
                 </div>
             </form>
             {error && <div>Sign up failed</div>}
         </div>
-
+        </CardContent>
+        </Card>
+        </Box>
+        </>
     );
 };
 
