@@ -98,14 +98,21 @@ body {
 }
 
 #landing-tattoo-btn{
+<<<<<<< HEAD
   position: absolute;
   color: rgba(255, 255, 255, 1);
   background-color: transparent;
+=======
+  position: fixed;
+  color: #fff;
+  background-color: #0d0d0d;
+  margin-left: 580px;
+>>>>>>> 9675ab3 (style signup come back for card)
   top: 18%;
   left:15px;
   width: auto;
-  height: auto;
-  font-size: 10vh;
+  height: 60%;
+  font-size: 6vh;
   border: none;
   padding: 5px;
   -webkit-animation: glowing 3000ms infinite;
@@ -143,42 +150,46 @@ body {
   cursor: pointer;
 }
 
+/*******************************************************************************/
 
 /* Signup Form Styling*/
-.signup-form {
-  width: 90%;
-  height: 100%;
-  border: 8px solid #7a2130;
-  background: lightgray;
+
+.signup-pg {
+  background-image: url('../image/signup-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.signup-img {
-  height: 700px;
-  margin-top: 0%;
+.signup-card {
+  margin-top: 5%;
+  border: 4px solid grey;
+  padding: 10%;
+  box-shadow: 0px 0px 60px 60px #000000;
 }
 
-.signup-img-2 {
-  position:fixed;
-  object-fit:contain;
-  height: 700px;
-  margin-top: 0%;
-  left: 51%;
+.card-login {
+  color: teal;
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+  background-color: blue;
 }
 
 
-
-
-@media screen and (max-width: 980px) {
-  .signup-img-2 {
-    display:fill;
+@media screen and (max-width: 1100px) {
+  .signup-card {
+    margin-top: 15%;
   }
 }
 
 
 @media screen and (max-width: 575px){
-  .signup-img-2 {
-    display: none;
+  .signup-card {
+    margin-top: 25%;
   }
 }
-
-

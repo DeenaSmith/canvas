@@ -43,20 +43,20 @@ const ArtistSignup = () => {
     };
 
     return (
-        <>
-        <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'0 auto', float: 'none', marginBottom:'10px', marginTop: '30px' }}>
-        <Card variant='outlined'>
+        <div className="signup-pg">
+        <div className="container signup-card">
+        <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'auto', float: 'none', marginBottom:'auto', marginTop: 'auto' }}>
+        <Card>
         <CardContent>
-        <div className="container my-1">
-            {/* <Link to="/login">← Go to Login</Link> */}
-            <div className="row">
-                <div className="col-8">
-                    <h2>Signup</h2>
-                    <form onSubmit={handleFormSubmit} className="col-8">
-                        <div className="">
-                            <label htmlFor="username">User Name:</label>
+            <div>
+                <div className="col-12">
+                    <h2 className="card-header">Signup</h2>
+                    <p>Already have an account? <span><a href="/login" className='card-login'> Login</a></span></p>
+                    <form onSubmit={handleFormSubmit} className="col-12">
+                        <div>
+                            <label htmlFor="username">Username:</label>
                             <input
-                                placeholder="First"
+                                placeholder="Username"
                                 name="username"
                                 type="username"
                                 id="username"
@@ -64,7 +64,7 @@ const ArtistSignup = () => {
                             />
                         </div>
 
-                        <div className="">
+                        <div>
                             <label htmlFor="email">Email:</label>
                             <input
                                 placeholder="youremail@test.com"
@@ -75,7 +75,7 @@ const ArtistSignup = () => {
                             />
                         </div>
 
-                        <div className="flex-row space-between my-2">
+                        <div>
                             <label htmlFor="pwd">Password:</label>
                             <input
                                 placeholder="******"
@@ -92,16 +92,14 @@ const ArtistSignup = () => {
                             </CardActions>
                         </div>
                     </form>
-                <img alt="red background" className="col-4 signup-img p-0" src="https://i.postimg.cc/ncN4LsQF/Screen-Shot-2022-07-09-at-9-17-46-PM.jpg"></img>
-                <img alt="flower tattoo" className="col-4 signup-img-2 p-0" src ="https://i.pinimg.com/originals/e8/0c/01/e80c01003d7bb9ef0357dd053135cded.png"></img>
-            </div>
+                </div>
         </div>
             {error && <div>Sign up failed</div>}
-        </div>
         </CardContent>
         </Card>
         </Box>
-        </>
+        </div>
+        </div>
     );
 };
 
