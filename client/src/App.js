@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {  
   ApolloClient,
@@ -16,6 +16,26 @@ import Gallery from './pages/Gallery';
 
 
 function App() {
+  const [ categories ] = useState([
+    {
+      name:"American Traditional"
+    },
+    {
+      name:"Color"
+    },
+    {
+      name:"Black & Grey"
+    },
+    {
+      name:"Japanese"
+    },
+    {
+      name:"Realism"
+    }
+
+  ])
+
+  const [currentCategory, setCurrentCategory] = useState(categories[0])
 
   const client = new ApolloClient({
     uri: 'http://localhost:3001/graphql',
@@ -27,13 +47,18 @@ function App() {
       <Router>
         <ApolloProvider client={client}>
           <div>
-            <Header />
+            <Header
+              categories={categories}
+              setCurrentCategory={setCurrentCategory}
+              currentCategory={currentCategory}
+              >
+            </Header>
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<ArtistSignup />} />
-              <Route path='/gallery' element={<Gallery />} />
+              <Route path='/gallery' element={<Gallery currentCategory={currentCategory}></Gallery>} />
             </Routes>
           </div>
       </ApolloProvider>

@@ -125,7 +125,7 @@ const Photolist = ({ category }) => {
   ])
 
 
-const currentPhotos = photos.filter(photo => photo.catergory === category)
+const currentPhotos = photos.filter(photo => photo.category === category)
 
 return (
   <div>
