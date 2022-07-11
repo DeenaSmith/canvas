@@ -99,7 +99,7 @@ body {
 
 #landing-tattoo-btn{
   position: absolute;
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
   background-color: transparent;
   top: 18%;
   left:15px;
@@ -116,13 +116,13 @@ body {
 
 @-webkit-keyframes glowing {
   0% {
-    -webkit-box-shadow: 0 0 3px #fff;
+    -webkit-box-shadow: 0 0 0 transparent;
   }
   50% {
     -webkit-box-shadow: 0 0 15px #fff;
   }
   100% {
-    -webkit-box-shadow: 0 0 3px #fff;
+    -webkit-box-shadow: 0 0 0 transparent;
   }
 }
 @keyframes glowing {
