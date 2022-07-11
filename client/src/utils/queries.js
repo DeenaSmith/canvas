@@ -1,27 +1,27 @@
 
 import { gql } from '@apollo/client';
 
-export const QUERY_REVIEWS = gql`
-  query reviews($username: String) {
-    reviews(username: $username) {
-      _id
-      reviewText
-      createdAt
-      username
-    }
-}
-`;
+// export const QUERY_REVIEWS = gql`
+//   query reviews($username: String) {
+//     reviews(username: $username) {
+//       _id
+//       reviewText
+//       createdAt
+//       username
+//     }
+// }
+// `;
 
-export const QUERY_REVIEW = gql`
-  query review($id: ID!) {
-    review(_id: $id) {
-      _id
-      reviewText
-      createdAt
-      username
-    }
-}
-`;
+// export const QUERY_REVIEW = gql`
+//   query review($id: ID!) {
+//     review(_id: $id) {
+//       _id
+//       reviewText
+//       createdAt
+//       username
+//     }
+// }
+// `;
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -29,11 +29,6 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      reviews {
-        _id
-        reviewText
-        createdAt
-      }
     }
   }
 `;
@@ -44,11 +39,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      reviews {
-        _id
-        reviewText
-        createdAt
-      }
+    
     }
   }
 `;

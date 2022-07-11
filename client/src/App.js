@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
 import Gallery from './pages/Gallery';
+import Profile from './pages/Profile';
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/signup" element={<ArtistSignup />} />
               <Route path='/gallery' element={<Gallery currentCategory={currentCategory}></Gallery>} />
             </Routes>

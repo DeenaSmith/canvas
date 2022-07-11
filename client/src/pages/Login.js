@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { Navigate, useParams } from 'react-router-dom';
 
 import Auth from '../utils/auth';
 
@@ -27,8 +28,10 @@ const Login = (props) => {
             const { data } = await login({
                 variables: { ...formState },
             });
-
+            console.log('data', data)
             Auth.login(data.login.token);
+
+        
         } catch (e) {
             console.error(e);
         }
@@ -40,6 +43,9 @@ const Login = (props) => {
         });
     };
 
+    if (Auth.loggedIn()) {
+        return <Navigate to="/profile" />;
+    }
 
     return (
         <main className="flex-row justify-center mb-4">

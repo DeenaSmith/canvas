@@ -42,7 +42,10 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^7.2.2"
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
   },
-  "resolutions": {"babel-loader":"8.1.0"}
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  }
 }
