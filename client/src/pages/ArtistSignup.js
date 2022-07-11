@@ -56,7 +56,7 @@ const ArtistSignup = () => {
                         <div>
                             {/*<label htmlFor="username">Username:</label>*/}
                             <input
-                                placeholder="Username"
+                                placeholder="username"
                                 name="username"
                                 type="username"
                                 id="username"
