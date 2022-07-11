@@ -11,7 +11,7 @@ import Header from './components/Header';
 import ArtistSignup from './pages/ArtistSignup';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Upload from './pages/uploadPhoto';
+import Photolist from './pages/Photos';
 import Landing from './pages/Landing';
 
 
@@ -34,7 +34,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<ArtistSignup />} />
             </Routes>
-            <Upload />
+            <Photolist />
           </div>
       </ApolloProvider>
     </Router>
