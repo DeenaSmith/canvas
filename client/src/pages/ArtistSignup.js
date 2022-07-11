@@ -46,15 +46,15 @@ const ArtistSignup = () => {
         <div className="signup-pg">
         <div className="container signup-card">
         <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'auto', float: 'none', marginBottom:'auto', marginTop: 'auto' }}>
-        <Card>
-        <CardContent>
+        {/*<Card>
+        <CardContent>*/}
             <div>
                 <div className="col-12">
-                    <h2 className="card-header">Signup</h2>
+                    <form onSubmit={handleFormSubmit} className="box">
+                    <h2 className="">Signup</h2>
                     <p>Already have an account? <span><a href="/login" className='card-login'> Login</a></span></p>
-                    <form onSubmit={handleFormSubmit} className="col-12">
                         <div>
-                            <label htmlFor="username">Username:</label>
+                            {/*<label htmlFor="username">Username:</label>*/}
                             <input
                                 placeholder="Username"
                                 name="username"
@@ -65,7 +65,7 @@ const ArtistSignup = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="email">Email:</label>
+                            {/*<label htmlFor="email">Email:</label>*/}
                             <input
                                 placeholder="youremail@test.com"
                                 name="email"
@@ -76,7 +76,7 @@ const ArtistSignup = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="pwd">Password:</label>
+                            {/*<label htmlFor="pwd">Password:</label>*/}
                             <input
                                 placeholder="******"
                                 name="password"
@@ -87,16 +87,16 @@ const ArtistSignup = () => {
                         </div>
                         
                         <div className="flex-row flex-end">
-                            <CardActions >
+                            {/*<CardActions >*/}
                             <Button type="submit">Submit</Button>
-                            </CardActions>
+                            {/*</CardActions>*/}
                         </div>
                     </form>
                 </div>
         </div>
             {error && <div>Sign up failed</div>}
-        </CardContent>
-        </Card>
+        {/*</CardContent>
+        </Card>*/}
         </Box>
         </div>
         </div>
