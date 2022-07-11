@@ -67,7 +67,7 @@ const ArtistSignup = () => {
                         <div>
                             {/*<label htmlFor="email">Email:</label>*/}
                             <input
-                                placeholder="youremail@test.com"
+                                placeholder="youremail@email.com"
                                 name="email"
                                 type="email"
                                 id="email"
@@ -78,7 +78,7 @@ const ArtistSignup = () => {
                         <div>
                             {/*<label htmlFor="pwd">Password:</label>*/}
                             <input
-                                placeholder="******"
+                                placeholder="********"
                                 name="password"
                                 type="password"
                                 id="pwd"
