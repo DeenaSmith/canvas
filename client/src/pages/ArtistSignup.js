@@ -46,15 +46,12 @@ const ArtistSignup = () => {
         <div className="signup-pg">
         <div className="container signup-card">
         <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'auto', float: 'none', marginBottom:'auto', marginTop: 'auto' }}>
-        {/*<Card>
-        <CardContent>*/}
             <div>
                 <div className="col-12">
                     <form onSubmit={handleFormSubmit} className="box">
                     <h2 className="">Signup</h2>
                     <p>Already have an account? <span><a href="/login" className='card-login'> Login</a></span></p>
                         <div>
-                            {/*<label htmlFor="username">Username:</label>*/}
                             <input
                                 placeholder="username"
                                 name="username"
@@ -65,7 +62,6 @@ const ArtistSignup = () => {
                         </div>
 
                         <div>
-                            {/*<label htmlFor="email">Email:</label>*/}
                             <input
                                 placeholder="youremail@email.com"
                                 name="email"
@@ -76,7 +72,6 @@ const ArtistSignup = () => {
                         </div>
 
                         <div>
-                            {/*<label htmlFor="pwd">Password:</label>*/}
                             <input
                                 placeholder="********"
                                 name="password"
@@ -87,16 +82,12 @@ const ArtistSignup = () => {
                         </div>
                         
                         <div className="flex-row flex-end">
-                            {/*<CardActions >*/}
                             <Button type="submit">Submit</Button>
-                            {/*</CardActions>*/}
                         </div>
                     </form>
                 </div>
         </div>
             {error && <div>Sign up failed</div>}
-        {/*</CardContent>
-        </Card>*/}
         </Box>
         </div>
         </div>
