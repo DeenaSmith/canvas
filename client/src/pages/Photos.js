@@ -132,7 +132,7 @@ return (
     <div className="flex-row">
       {currentPhotos.map((image, i) => (
         <img 
-        src={require(`../../image/tattoo ideas/${category}/${i}.jpg`).default}
+        src={require(`../image/tattoo ideas/${category}/${i}.jpg`).default}
         alt={image.name}
         className='img-thumbnail mx-1'
         key={image.name}

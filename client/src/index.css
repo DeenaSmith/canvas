@@ -87,7 +87,7 @@ body {
 /* Landing Page Styling */
 
 .landing {
-  background-image: url('../image/background-landing.jpg');
+  background-image: url('../../client/src/image/background-landing.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
