@@ -3,9 +3,9 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
+/*import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+import CardContent from '@mui/material/CardContent'; */
 import Button from '@mui/material/Button';
 
 const ArtistSignup = () => {
@@ -44,6 +44,13 @@ const ArtistSignup = () => {
 
     return (
         <div className="signup-pg">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="animate-charcter">CANVAS</h3>
+                </div>
+                </div>
+            </div>
         <div className="container signup-card">
         <Box sx={{ minWidth: 'auto', maxWidth:'300px', margin:'auto', float: 'none', marginBottom:'auto', marginTop: 'auto' }}>
             <div>

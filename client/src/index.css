@@ -152,7 +152,36 @@ body {
 
 /*******************************************************************************/
 
-/* Signup Form Styling*/
+/* Signup Page Styling*/
+
+.animate-charcter
+{
+  margin-top: 3%;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #3f3f40 0%,
+    #6f6f70 29%,
+    #b5b5b5 67%,
+    #ffffff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 100px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 
 .signup-pg {
   background-image: url('../image/signup-img.jpg');
@@ -177,10 +206,10 @@ body {
 }
 
 .box {
-  width: 500px;
-  padding: 40px;
+  width: 100%;
+  padding: 5%;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   margin-top: 50%;
   border-radius: 25px;
@@ -213,7 +242,7 @@ body {
   text-align: center;
   border: 2px solid white;
   padding: 14px 10px;
-  width: 200px;
+  width: 85%;
   outline: none;
   color: white;
   border-radius: 24px;
@@ -221,22 +250,30 @@ body {
 }
 
 .box input[type = "username"]:focus,.box input[type = "email"]:focus,.box input[type = "password"]:focus{
-  width: 280px;
+  width: 100%;
   border-color: #1a69bd;
 }
 
 
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 980px) {
   .signup-card {
     margin-top: 15%;
+  }
+
+  .box {
+    margin-top: 50%;
   }
 }
 
 
 @media screen and (max-width: 575px){
   .signup-card {
-    margin-top: 25%;
+    margin-top: 20%;
+  }
+
+  .box {
+    margin-top: 65%;
   }
 }
