@@ -1,7 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Sidebar from '../Sidebar';
-function Header() {
+function Header(props) {
+    const {
+        categories=[],
+        setCurrentCategory,
+        currentCategory,
+    } = props
+
     return (
         <section>
             <header className="canvas-header">
@@ -14,6 +20,26 @@ function Header() {
                     <NavLink exact='true' to='/signup' className="header-links">
                         <h3>Signup</h3>
                     </NavLink>
+                </div>
+                <div>
+                    <ul>
+                    {categories.map((category) => (
+            <li
+              className={`mx-1 ${
+                currentCategory.name === category.name
+                }`}
+              key={category.name}
+            >
+              <span
+                onClick={() => {
+                  setCurrentCategory(category);
+                }}
+              >
+                {(category.name)}
+              </span>
+            </li>
+                    ))}
+                    </ul>
                 </div>
             </header>
         </section>
