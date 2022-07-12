@@ -1,7 +1,8 @@
 const {Schema, model} = require('mongoose')
 const dateFormat = require('../utils/dateFormat')
+const mongoose = require('mongoose');
 
-const reviewSchema = new Schema(
+const reviewSchema = new mongoose.Schema(
     {
         reviewText: {
             type: String,

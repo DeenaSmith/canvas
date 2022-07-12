@@ -1,7 +1,9 @@
 const { Schema, model} = require('mongoose')
 const bcrypt = require('bcrypt')
+const mongoose = require('mongoose');
 
-const artistSchema = new Schema(
+
+const artistSchema = new mongoose.Schema(
     {
         username: {
             type: String,
@@ -22,7 +24,7 @@ const artistSchema = new Schema(
         },
         bio: {
             type: String,
-            required: 'Let us know more about yourself and your work...',
+            //required: 'Let us know more about yourself and your work...',
             minlength: 1,
             maxlength: 300
         },
