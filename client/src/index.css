@@ -145,7 +145,7 @@ body {
 
 /*******************************************************************************/
 
-/* Signup Form Styling*/
+/* Signup and Login Form Styling*/
 
 .animate-charcter
 {
@@ -205,7 +205,7 @@ body {
   position: absolute;
   top: 70%;
   left: 50%;
-  margin-top: 50%;
+  margin-top: 17%;
   border-radius: 25px;
   transform: translate(-50%, -50%);
   background-image: url('../image/signup-img.jpg');
@@ -236,7 +236,7 @@ body {
   text-align: center;
   border: 2px solid white;
   padding: 14px 10px;
-  width: 85%;
+  width: 65%;
   outline: none;
   color: white;
   border-radius: 24px;
@@ -244,27 +244,37 @@ body {
 }
 
 .box input[type = "username"]:focus,.box input[type = "email"]:focus,.box input[type = "password"]:focus{
-  width: 100%;
+  width: 75%;
   border-color: #1a69bd;
+}
+
+.login-btn {
+  color: #1a69bd;
+  margin-bottom: 3%;
 }
 
 @media screen and (max-width: 980px) {
   .signup-card {
-    margin-top: 15%;
+    margin-top: 5%;
   }
 
   .box {
-    margin-top: 50%;
+    margin-top: 27%;
   }
 }
 
 
 @media screen and (max-width: 575px){
   .signup-card {
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .box {
-    margin-top: 65%;
+    margin-top: 55%;
+  }
+
+  .animate-charcter {
+    margin-top: 15%;
+    font-size: 85px;
   }
 }

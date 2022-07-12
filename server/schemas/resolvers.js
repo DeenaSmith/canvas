@@ -1,16 +1,8 @@
 
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Reviews } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
-const {createWriteStream} = require('fs')
 
-const storeUpload = ({ stream, filename }) =>
-  new Promise((resolve, reject) =>
-    stream
-      .pipe(createWriteStream(filename))
-      .on("finish", () => resolve())
-      .on("error", reject)
-  );
 
 const resolvers = {
     Query: {
@@ -36,7 +28,7 @@ const resolvers = {
 
     Mutation: {
         addUser: async (parent, args) => {
-             console.log(args)
+            console.log(args)
             const user = await User.create(args);
             const token = signToken(user);
 
@@ -58,12 +50,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-
-        uploadFile: async (parent, { file }) => {
-            const { stream, filename } = await file;
-            await storeUpload({ stream, filename });
-            return true;
-        }
+        
     }
 
 };

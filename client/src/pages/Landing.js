@@ -6,7 +6,7 @@ function Landing() {
     return (
         <>
             <div className="landing">
-                <NavLink exact='true' to='/'>
+                <NavLink exact='true' to='/signup'>
                 <button id="landing-tattoo-btn" className="btn rounded p-4" type="submit">
                     C
                     <br/>
