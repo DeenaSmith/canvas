@@ -3,6 +3,8 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import Button from '@mui/material/Button';
+import { Navigate, useParams } from 'react-router-dom';
+
 
 const ArtistSignup = () => {
 
@@ -38,13 +40,18 @@ const ArtistSignup = () => {
         });
     };
 
+    if (Auth.loggedIn()) {
+        return <Navigate to="/gallery" />;
+    }
+
     return (
         <div className="signup-pg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h3 class="animate-charcter">CANVAS</h3>
-                    </div>
+            <div className="container">
+                <div className="row">
+                <div className="col-md-12 text-center">
+                    <h3 className="animate-character">CANVAS</h3>
+                </div>
+
                 </div>
             </div>
             <div className="container signup-card">

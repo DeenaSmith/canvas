@@ -1,9 +1,8 @@
 const { Schema, model} = require('mongoose')
 const bcrypt = require('bcrypt')
-const mongoose = require('mongoose');
 
 
-const artistSchema = new mongoose.Schema(
+const artistSchema = new Schema(
     {
         username: {
             type: String,
@@ -22,18 +21,7 @@ const artistSchema = new mongoose.Schema(
             required: true,
             minLength: 8
         },
-        bio: {
-            type: String,
-            //required: 'Let us know more about yourself and your work...',
-            minlength: 1,
-            maxlength: 300
-        },
-        reviews: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'review'
-            }
-        ],
+        
     }
 )
 
