@@ -1,7 +1,9 @@
 {
   "name": "canvas",
   "version": "0.1.0",
-  "engines": {"node": "16.14.2"},
+  "engines": {
+    "node": "16.14.2"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -40,6 +42,10 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^7.2.2"
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   }
 }

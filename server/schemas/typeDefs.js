@@ -5,15 +5,9 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    reviews: [Reviews]
+    password: String
   }
 
-  type Reviews {
-    _id: ID
-    reviewText: String
-    createdAt: String
-    username: String
-  }
 
   type Auth {
     token: ID!
@@ -24,8 +18,6 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
-    reviews(username: String): [Reviews]
-    review(_id: ID!): Reviews
   }
 
   scalar Upload
@@ -33,7 +25,6 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addReview(reviewText: String!): Reviews
     uploadFile(file: Upload!): Boolean
   }
 
