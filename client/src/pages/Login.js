@@ -44,7 +44,7 @@ const Login = (props) => {
     };
 
     if (Auth.loggedIn()) {
-        return <Navigate to="/profile" />;
+        return <Navigate to="/gallery" />;
     }
 
     return (
