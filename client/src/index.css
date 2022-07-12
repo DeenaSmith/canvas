@@ -98,16 +98,9 @@ body {
 }
 
 #landing-tattoo-btn{
-<<<<<<< HEAD
   position: absolute;
   color: rgba(255, 255, 255, 1);
   background-color: transparent;
-=======
-  position: fixed;
-  color: #fff;
-  background-color: #0d0d0d;
-  margin-left: 580px;
->>>>>>> 9675ab3 (style signup come back for card)
   top: 18%;
   left:15px;
   width: auto;
@@ -152,7 +145,7 @@ body {
 
 /*******************************************************************************/
 
-/* Signup Page Styling*/
+/* Signup Form Styling*/
 
 .animate-charcter
 {
@@ -182,6 +175,7 @@ body {
     background-position: 200% center;
   }
 }
+
 
 .signup-pg {
   background-image: url('../image/signup-img.jpg');
