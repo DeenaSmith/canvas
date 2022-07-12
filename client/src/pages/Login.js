@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import { Navigate, useParams } from 'react-router-dom';
-
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -44,16 +43,24 @@ const Login = (props) => {
     };
 
     if (Auth.loggedIn()) {
-        return <Navigate to="/profile" />;
+        return <Navigate to="/gallery" />;
     }
 
     return (
-        <main className="flex-row justify-center mb-4">
-            <div className="col-12 col-md-6">
-                <div className="card">
-                    <h4 className="card-header">Login</h4>
-                    <div className="card-body">
-                        <form onSubmit={handleFormSubmit}>
+        <main className="signup-pg">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h3 className="animate-character">CANVAS</h3>
+                    </div>
+                </div>
+            </div>
+            <div className="container signup-card">
+                <div>
+                    <div className="col-12">
+                        <form onSubmit={handleFormSubmit} className="box">
+                            <h2 className="card-header">Login</h2>
+                            <p>Don't have an account? <span><a href="/signup" className='card-login'> Signup</a></span></p>
                             <input
                                 className="form-input"
                                 placeholder="Email"
@@ -72,12 +79,11 @@ const Login = (props) => {
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <button className="btn d-block w-100" type="submit">
-                                Submit
+                            <button className="btn d-block w-100 flex-row flex-end login-btn" type="submit">
+                                SUBMIT
                             </button>
+                            {error && <div>Login failed, try again!</div>}
                         </form>
-
-                        {error && <div>Login failed, try again!</div>}
                     </div>
                 </div>
             </div>
