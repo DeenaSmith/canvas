@@ -36,6 +36,7 @@ function Header(props) {
             </ul>
             <div className="col-6">
               <nav>
+                <h2 className="choose-style">Choose Your Style:</h2>
                 <ul>
                   {categories.map((category) => (
                     <li
@@ -54,16 +55,8 @@ function Header(props) {
                 </ul>
               </nav>
             </div>
-            <div className="header-links col-6">
-              <NavLink exact="true" to="/login" className="header-links">
-                <h3>Login</h3>
-              </NavLink>
-              <NavLink exact="true" to="/signup" className="header-links">
-                <h3>Signup</h3>
-              </NavLink>
             </div>
             </div>
-          </div>
         </header>
       </section>
     );
