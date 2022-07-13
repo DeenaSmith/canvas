@@ -304,12 +304,12 @@ li:hover {
 #landing-tattoo-btn{
   position: absolute;
   color: rgba(255, 255, 255, 1);
-  background-color: transparent;
-  top: 18%;
-  left:15px;
-  width: auto;
-  height: 60%;
-  font-size: 6vh;
+  background-color: black;
+  top: 22%;
+  left: 31%;
+  width: 5%;
+  height: 50%;
+  font-size: 5vh;
   border: none;
   padding: 5px;
   -webkit-animation: glowing 3000ms infinite;

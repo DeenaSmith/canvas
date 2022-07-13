@@ -55,8 +55,8 @@ function Header(props) {
                 </ul>
               </nav>
             </div>
-            </div>
-            </div>
+          </div>
+          </div>
         </header>
       </section>
     );
