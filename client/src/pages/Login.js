@@ -49,9 +49,9 @@ const Login = (props) => {
     return (
         <main className="signup-pg">
             <div className="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h3 class="animate-charcter">CANVAS</h3>
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h3 className="animate-charcter">CANVAS</h3>
                     </div>
                 </div>
             </div>

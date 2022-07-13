@@ -14,16 +14,8 @@ function Header(props) {
       <section>
         <header className="canvas-header">
           <Sidebar> </Sidebar>
-          <h1>CANVAS</h1>
-          <div className="header-links">
-            <NavLink exact="true" to="/login" className="header-links">
-              <h3>Login</h3>
-            </NavLink>
-            <NavLink exact="true" to="/signup" className="header-links">
-              <h3>Signup</h3>
-            </NavLink>
-          </div>
-          <div>
+          <h1 className="col-3">CANVAS</h1>
+          <div className="col-3">
             <nav>
             <ul>
               {categories.map((category) => (
@@ -36,12 +28,20 @@ function Header(props) {
                       setCurrentCategory(category);
                     }}
                   >
-                    {category.name}
+                    {category.name + ' • '}
                   </span>
                 </li>
               ))}
             </ul>
             </nav>
+          </div>
+          <div className="header-links col-3">
+            <NavLink exact="true" to="/login" className="header-links">
+              <h3>Login</h3>
+            </NavLink>
+            <NavLink exact="true" to="/signup" className="header-links">
+              <h3>Signup</h3>
+            </NavLink>
           </div>
         </header>
       </section>

@@ -128,13 +128,13 @@ const Photolist = ({ category }) => {
 const currentPhotos = photos.filter(photo => photo.category === category)
 
 return (
-  <div>
-    <div className="flex-row">
+  <div className="container">
+    <div className="row">
       {currentPhotos.map((image, i) => (
         <img 
         src={require(`../image/tattooIdeas/${category}/${i}.jpg`)}
         alt={image.name}
-        className='img-thumbnail mx-1'
+        className='gallery-images'
         key={image.name}
         />
       ))}

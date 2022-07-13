@@ -48,10 +48,9 @@ const ArtistSignup = () => {
         <div className="signup-pg">
             <div className="container">
                 <div className="row">
-                <div className="col-md-12 text-center">
-                    <h3 className="animate-character">CANVAS</h3>
-                </div>
-
+                    <div className="col-md-12 text-center">
+                        <h3 className="animate-charcter">CANVAS</h3>
+                    </div>
                 </div>
             </div>
             <div className="container signup-card">

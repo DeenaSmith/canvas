@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 /*******************************************************************************/
 
@@ -18,17 +18,30 @@ body {
   background: black;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 25px;
+}
+
+li:hover {
+  color: grey;
+}
+
 /*******************************************************************************/
 
 /* Header Styling */
 .canvas-header {
   font-size: 35px;
+  font-family: 'Ubuntu', sans-serif;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
-  background: #3c3837;
+  background-image: url('../image/gallery-header.jpg');
+  background-size:contain;
   color: white;
-  font-family: 'Italiana', serif;
   justify-content: space-between;
   box-shadow: 0px 4px 4px black;
 }
@@ -277,4 +290,27 @@ body {
     margin-top: 15%;
     font-size: 85px;
   }
+}
+
+/*******************************************************************************/
+
+/* Gallery Styling */
+
+.gallery-images {
+  width: 30%;
+  height: 30%;
+  object-fit:fill;
+  border: 4px solid grey;
+  margin: 1%;
+  -webkit-animation: glowing 3000ms infinite;
+  -moz-animation: glowing 3000ms infinite;
+  -o-animation: glowing 3000ms infinite;
+  animation: glowing 3000ms infinite;
+}
+
+.gallery-h1 {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
