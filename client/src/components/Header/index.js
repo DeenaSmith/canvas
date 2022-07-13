@@ -14,34 +14,48 @@ function Header(props) {
       <section>
         <header className="canvas-header">
           <Sidebar> </Sidebar>
-          <h1>CANVAS</h1>
-          <div className="header-links">
-            <NavLink exact="true" to="/login" className="header-links">
-              <h3>Login</h3>
-            </NavLink>
-            <NavLink exact="true" to="/signup" className="header-links">
-              <h3>Signup</h3>
-            </NavLink>
-          </div>
-          <div>
-            <nav>
-            <ul>
-              {categories.map((category) => (
-                <li
-                  className={`mx-1 ${currentCategory.name === category.name}`}
-                  key={category.name}
-                >
-                  <span
-                    onClick={() => {
-                      setCurrentCategory(category);
-                    }}
-                  >
-                    {category.name}
-                  </span>
-                </li>
-              ))}
+            <h1 className="context">CANVAS</h1>
+            <svg className="arrows">
+              <path className="a1" d="M0 0 L30 32 L60 0"></path>
+              <path className="a2" d="M0 20 L30 52 L60 20"></path>
+              <path className="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+          <div className="area container">
+            <div className="row">
+            <ul className="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
-            </nav>
+            <div className="col-12 style-choose d-flex justify-content-center">
+              <nav>
+                <h2 className="choose-style d-flex justify-content-center">Choose A Style:</h2>
+                <ul>
+                  {categories.map((category) => (
+                    <li
+                      className={`mx-1 ${currentCategory.name === category.name && 'navActive'}`}
+                      key={category.name}
+                    >
+                      <span
+                        onClick={() => {
+                          setCurrentCategory(category);
+                        }}
+                      >
+                        {category.name + ' • '}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
           </div>
         </header>
       </section>
