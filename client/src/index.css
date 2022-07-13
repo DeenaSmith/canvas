@@ -457,39 +457,13 @@ li:hover {
   margin-bottom: 3%;
 }
 
-@media screen and (max-width: 980px) {
-  .signup-card {
-    margin-top: 5%;
-  }
-
-  .box {
-    margin-top: 27%;
-  }
-}
-
-
-@media screen and (max-width: 575px){
-  .signup-card {
-    margin-top: 10%;
-  }
-
-  .box {
-    margin-top: 55%;
-  }
-
-  .animate-charcter {
-    margin-top: 15%;
-    font-size: 85px;
-  }
-}
-
 /*******************************************************************************/
 
 /* Gallery Styling */
 
 .gallery-images {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   border: 1px solid white;
   border-radius: 20px;
   margin: 1%;
@@ -497,6 +471,13 @@ li:hover {
   -moz-animation: glowing 3000ms infinite;
   -o-animation: glowing 3000ms infinite;
   animation: glowing 3000ms infinite;
+}
+
+.gallery-block {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%
 }
 
 .choose-style {
@@ -519,4 +500,39 @@ li:hover {
 
 .style-choose {
   align-items: center;
+}
+
+/*******************************************************************************/
+
+/* Responsive Design */
+
+
+@media screen and (max-width: 980px) {
+  .signup-card {
+    margin-top: 5%;
+  }
+
+  .box {
+    margin-top: 27%;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .signup-card {
+    margin-top: 10%;
+  }
+
+  .box {
+    margin-top: 55%;
+  }
+
+  .animate-charcter {
+    margin-top: 15%;
+    font-size: 85px;
+  }
+
+  .context {
+    top: 10vh;
+    margin-bottom: 100%;
+  }
 }
