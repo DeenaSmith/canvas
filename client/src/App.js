@@ -56,9 +56,10 @@ function App() {
 
   ])
 
+  
+
   const [currentCategory, setCurrentCategory] = useState(categories[0])
 
-  
 
   return (
     
@@ -76,7 +77,9 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/signup" element={<ArtistSignup />} />
-              <Route path='/gallery' element={<Gallery currentCategory={currentCategory}></Gallery>} />
+              <Route path='/gallery' element={<Gallery currentCategory={currentCategory}
+              >
+              </Gallery>} />
             </Routes>
           </div>
       </ApolloProvider>
