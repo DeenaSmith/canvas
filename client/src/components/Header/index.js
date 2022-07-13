@@ -15,10 +15,10 @@ function Header(props) {
         <header className="canvas-header">
           <Sidebar> </Sidebar>
             <h1 className="context">CANVAS</h1>
-            <svg class="arrows">
-              <path class="a1" d="M0 0 L30 32 L60 0"></path>
-              <path class="a2" d="M0 20 L30 52 L60 20"></path>
-              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            <svg className="arrows">
+              <path className="a1" d="M0 0 L30 32 L60 0"></path>
+              <path className="a2" d="M0 20 L30 52 L60 20"></path>
+              <path className="a3" d="M0 40 L30 72 L60 40"></path>
             </svg>
           <div className="area container">
             <div className="row">
@@ -34,9 +34,9 @@ function Header(props) {
               <li></li>
               <li></li>
             </ul>
-            <div className="col-6">
+            <div className="col-12 style-choose d-flex justify-content-center">
               <nav>
-                <h2 className="choose-style">Choose Your Style:</h2>
+                <h2 className="choose-style d-flex justify-content-center">Choose A Style:</h2>
                 <ul>
                   {categories.map((category) => (
                     <li

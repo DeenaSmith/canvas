@@ -27,7 +27,7 @@ ul {
 }
 
 li:hover {
-  color: grey;
+  color: #2994D1;
 }
 
 /*******************************************************************************/
@@ -44,16 +44,12 @@ li:hover {
 }
 
 .context {
+  text-align: center;
   width: 100%;
   position:relative;
   top:30vh;
-  
-}
-
-.context {
-  text-align: center;
-  margin-bottom: 70%;;
-  font-size: 50px;
+  margin-bottom: 60%;;
+  font-size: 80px;
   color: #fff;
   text-shadow:
       0 0 7px #fff,
@@ -505,6 +501,11 @@ li:hover {
 
 .choose-style {
   color: #fff;
+  font-size: 45px;
+  margin-bottom: 5%;
+  border-bottom: 3px solid white;
+  width: 100%;
+  align-content:center;
   text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
@@ -514,4 +515,8 @@ li:hover {
     0 0 92px #2994D1,
     0 0 102px #2994D1,
     0 0 151px #2994D1;
-};
+}
+
+.style-choose {
+  align-items: center;
+}
