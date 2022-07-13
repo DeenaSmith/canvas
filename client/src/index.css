@@ -52,6 +52,10 @@ li:hover {
   font-size: 23px;
 }
 
+.navActive {
+  color: #1a69bd;
+}
+
 /*******************************************************************************/
 
 /* Burger Menu (bm) / Sidebar Styling */
@@ -297,9 +301,8 @@ li:hover {
 /* Gallery Styling */
 
 .gallery-images {
-  width: 30%;
-  height: 30%;
-  object-fit:fill;
+  width: 300px;
+  height: 300px;
   border: 4px solid grey;
   margin: 1%;
   -webkit-animation: glowing 3000ms infinite;
@@ -309,8 +312,5 @@ li:hover {
 }
 
 .gallery-h1 {
-  font-family: 'Ubuntu', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  color: blue;
 }

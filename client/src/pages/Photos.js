@@ -134,7 +134,7 @@ return (
         <img 
         src={require(`../image/tattooIdeas/${category}/${i}.jpg`)}
         alt={image.name}
-        className='gallery-images'
+        className='gallery-images col-3'
         key={image.name}
         />
       ))}

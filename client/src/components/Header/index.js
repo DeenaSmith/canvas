@@ -20,7 +20,7 @@ function Header(props) {
             <ul>
               {categories.map((category) => (
                 <li
-                  className={`mx-1 ${currentCategory.name === category.name}`}
+                  className={`mx-1 ${currentCategory.name === category.name && 'navActive'}`}
                   key={category.name}
                 >
                   <span
