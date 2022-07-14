@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 /*******************************************************************************/
 
@@ -18,25 +18,228 @@ body {
   background: black;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 25px;
+}
+
+li:hover {
+  color: #2994D1;
+}
+
 /*******************************************************************************/
 
 /* Header Styling */
 .canvas-header {
-  font-size: 35px;
+  font-size: 45px;
+  font-family: 'Ubuntu', sans-serif;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
-  background: #3c3837;
   color: white;
-  font-family: 'Italiana', serif;
   justify-content: space-between;
-  box-shadow: 0px 4px 4px black;
+}
+
+.context {
+  text-align: center;
+  width: 100%;
+  position:relative;
+  top:30vh;
+  margin-bottom: 60%;;
+  font-size: 80px;
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #2994D1,
+      0 0 82px #2994D1,
+      0 0 92px #2994D1,
+      0 0 102px #2994D1,
+      0 0 151px #2994D1;
+}
+
+.arrows {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 270px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 2px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.area{
+  background: black;  
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+  width: 100%;
+  height:30vh;
+  
+ 
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -200px;
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
 }
 
 .header-links {
   padding-right: 20px;
   padding-top: 27px;
   font-size: 23px;
+}
+
+.navActive {
+  color: #1a69bd;
 }
 
 /*******************************************************************************/
@@ -48,6 +251,7 @@ body {
   margin-bottom: 15px;
   color: white;
   transition: color 0.2s;
+  position: sticky;
 }
 
 .bm-item:hover {
@@ -76,8 +280,8 @@ body {
 }
 
 .bm-menu {
-  background: #3c3837;
-  box-shadow: 4px 4px 4px #141414;
+  background: #171717;
+  box-shadow: 4px 4px 20px #2994D1;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -100,12 +304,12 @@ body {
 #landing-tattoo-btn{
   position: absolute;
   color: rgba(255, 255, 255, 1);
-  background-color: transparent;
-  top: 18%;
-  left:15px;
-  width: auto;
-  height: 60%;
-  font-size: 6vh;
+  background-color: black;
+  top: 22%;
+  left: 31%;
+  width: 5%;
+  height: 50%;
+  font-size: 5vh;
   border: none;
   padding: 5px;
   -webkit-animation: glowing 3000ms infinite;
@@ -119,7 +323,7 @@ body {
     -webkit-box-shadow: 0 0 0 transparent;
   }
   50% {
-    -webkit-box-shadow: 0 0 15px #fff;
+    -webkit-box-shadow: 0 0 20px #2994D1;
   }
   100% {
     -webkit-box-shadow: 0 0 0 transparent;
@@ -127,13 +331,13 @@ body {
 }
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 3px #fff;
+    box-shadow: 0 0 8px #2994D1;
   }
   50% {
-    box-shadow: 0 0 15px #fff;
+    box-shadow: 0 0 20px #2994D1;
   }
   100% {
-    box-shadow: 0 0 3px #fff;
+    box-shadow: 0 0 8px #2994D1;
   }
 }
 
@@ -253,6 +457,56 @@ body {
   margin-bottom: 3%;
 }
 
+/*******************************************************************************/
+
+/* Gallery Styling */
+
+.gallery-images {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 1%;
+  -webkit-animation: glowing 3000ms infinite;
+  -moz-animation: glowing 3000ms infinite;
+  -o-animation: glowing 3000ms infinite;
+  animation: glowing 3000ms infinite;
+}
+
+.gallery-block {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%
+}
+
+.choose-style {
+  color: #fff;
+  font-size: 45px;
+  margin-bottom: 5%;
+  border-bottom: 3px solid white;
+  width: 100%;
+  align-content:center;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #2994D1,
+    0 0 82px #2994D1,
+    0 0 92px #2994D1,
+    0 0 102px #2994D1,
+    0 0 151px #2994D1;
+}
+
+.style-choose {
+  align-items: center;
+}
+
+/*******************************************************************************/
+
+/* Responsive Design */
+
+
 @media screen and (max-width: 980px) {
   .signup-card {
     margin-top: 5%;
@@ -262,7 +516,6 @@ body {
     margin-top: 27%;
   }
 }
-
 
 @media screen and (max-width: 575px){
   .signup-card {
@@ -276,5 +529,10 @@ body {
   .animate-charcter {
     margin-top: 15%;
     font-size: 85px;
+  }
+
+  .context {
+    top: 10vh;
+    margin-bottom: 100%;
   }
 }

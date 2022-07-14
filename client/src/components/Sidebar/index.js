@@ -19,6 +19,12 @@ function Sidebar() {
             <NavLink exact='true' to='/gallery' className='menu-item'>
                 <h1>Gallery</h1>
             </NavLink>
+            <NavLink exact='true' to='/login' className='menu-item'>
+                <h1>Login</h1>
+            </NavLink>
+            <NavLink exact='true' to='/signup' className='menu-item'>
+                <h1>Signup</h1>
+            </NavLink>
             {loggedIn && (
                 <div>
                 <h1 className="menu-item" onClick={logout}>Logout</h1>

@@ -51,7 +51,7 @@ const Login = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h3 className="animate-character">CANVAS</h3>
+                        <h3 className="animate-charcter">CANVAS</h3>
                     </div>
                 </div>
             </div>
